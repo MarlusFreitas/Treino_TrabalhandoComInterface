@@ -37,9 +37,9 @@ public class Program {
         rs.processInvoice(cr);
         
         System.out.println("FATURA:");
-        System.out.println("Pagamento basico: " + cr.getInvoice().getBasicPayment());
-        System.out.println("Imposto: " + cr.getInvoice().getTax());
-        System.out.println("Pagamento total: " + cr.getInvoice().totalPayment());
+        System.out.printf("Pagamento basico: " + String.format("%.2f%n", cr.getInvoice().getBasicPayment()));
+        System.out.printf("Imposto: " + String.format("%.2f%n", cr.getInvoice().getTax()));
+        System.out.printf("Pagamento total: " + String.format("%.2f%n", cr.getInvoice().totalPayment()));
         
         
         sc.close();

@@ -1,7 +1,7 @@
 package model.service;
 
 //Calculando o impostos do Brasil
-public class BrazilianTax {
+public class BrazilianTax implements TaxService {
 
     public double tax(double amount){
         if(amount <= 100){

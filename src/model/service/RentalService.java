@@ -10,9 +10,9 @@ public class RentalService {
     private Double pricePerHour;
     private Double pricePerDay;
 
-    private BrazilianTax tax;
+    private TaxService tax;
 
-    public RentalService(Double pricePerHour, Double pricePerDay, BrazilianTax tax) {
+    public RentalService(Double pricePerHour, Double pricePerDay, TaxService tax) {
         this.pricePerHour = pricePerHour;
         this.pricePerDay = pricePerDay;
         this.tax = tax;
@@ -34,14 +34,14 @@ public class RentalService {
         this.pricePerDay = pricePerDay;
     }
 
-    public BrazilianTax getTax() {
+    public TaxService getTax() {
         return tax;
     }
 
     public void setTax(BrazilianTax tax) {
         this.tax = tax;
     }
-    
+    //Calculando o valor do pagamento basico e imposto
     public void processInvoice(CarRental cr){
         double minutes = Duration.between(cr.getStart(), cr.getFinish()).toMinutes();
         double hours = minutes/60;
