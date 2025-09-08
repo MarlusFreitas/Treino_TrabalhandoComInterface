@@ -1,0 +1,13 @@
+package model.service;
+
+//Calculando o impostos do Brasil
+public class BrazilianTax {
+
+    public double tax(double amount){
+        if(amount <= 100){
+            return amount*0.2;
+        } else{
+            return amount*0.15;
+        }
+    }
+}
